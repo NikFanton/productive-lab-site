@@ -1,0 +1,56 @@
+:root {
+  --bg: #f6f6f4; --surface: #fff; --text: #1c1d1b; --muted: #6a6d68; --border: #e2e3df;
+  --field: #f3f3f1; --accent: #2a2a2a; --accent-ink: #fff; --link: #2a2a2a;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111211; --surface: #1c1d1b; --text: #ecedea; --muted: #a2a59f; --border: #2e302c;
+    --field: #252724; --accent: #f1f1ef; --accent-ink: #111; --link: #f1f1ef;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+a { color: var(--link); text-underline-offset: 2px; }
+main { max-width: 680px; margin: 0 auto; padding: 48px 16px 40px; }
+
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 680px; margin: 0 auto; padding: 20px 16px 0; font-size: 15px; }
+.top a { text-decoration: none; }
+.top .home { font-weight: 700; color: var(--text); }
+.top .home img { width: 28px; height: 28px; border-radius: 7px; vertical-align: middle; margin-right: 8px; }
+.top nav { display: flex; gap: 16px; }
+.top nav a { color: var(--muted); }
+.top nav a:hover { color: var(--text); }
+
+h1 { margin: 0; font-size: 30px; line-height: 1.15; letter-spacing: -.015em; }
+.lead { margin: 10px 0 32px; color: var(--muted); font-size: 18px; }
+
+.apps { display: grid; gap: 12px; }
+.app { display: flex; align-items: center; gap: 16px; padding: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; text-decoration: none; color: inherit; transition: border-color .15s, transform .15s; }
+.app:hover { border-color: var(--muted); transform: translateY(-1px); }
+.app img { width: 64px; height: 64px; border-radius: 15px; flex: none; box-shadow: 0 1px 2px rgb(0 0 0 / .12); }
+.app strong { display: block; font-size: 18px; }
+.app span { color: var(--muted); font-size: 15px; }
+.app .go { margin-left: auto; color: var(--muted); font-size: 20px; }
+
+.links { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 8px 20px; color: var(--muted); font-size: 15px; }
+
+.legal { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 32px 36px; font-size: 17px; line-height: 1.65; overflow-wrap: anywhere; }
+.legal h1 { font-size: 32px; margin-bottom: 6px; }
+.legal .meta { margin: 0 0 24px; color: var(--muted); font-size: 15px; }
+.legal h2 { font-size: 20px; line-height: 1.3; margin: 32px 0 8px; }
+.legal p, .legal ul { margin: 0 0 14px; }
+.legal li { margin: 6px 0; }
+
+footer { max-width: 680px; margin: 0 auto; padding: 8px 16px 40px; color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; gap: 6px 16px; justify-content: center; }
+footer a { color: inherit; }
+
+@media (max-width: 480px) {
+  main { padding-top: 32px; }
+  h1 { font-size: 26px; }
+  .legal { padding: 22px 18px; border-radius: 18px; font-size: 16px; }
+  .legal h1 { font-size: 26px; }
+}

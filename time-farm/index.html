@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Time Farm</title>
+<link rel="canonical" href="https://timefarm.productive-lab.com/">
+<noscript><meta http-equiv="refresh" content="0; url=https://timefarm.productive-lab.com/"></noscript>
+<p>Opening <a id="to" href="https://timefarm.productive-lab.com/">Time Farm</a>…</p>
+<script>
+  var target = new URL("https://timefarm.productive-lab.com/");
+  new URLSearchParams(location.search).forEach(function (value, key) {
+    if (!target.searchParams.has(key)) target.searchParams.set(key, value);
+  });
+  document.getElementById('to').href = target.href;
+  location.replace(target.href);
+</script>
+</html>
